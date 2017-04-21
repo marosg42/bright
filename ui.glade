@@ -14,6 +14,7 @@
     <property name="border_width">20</property>
     <property name="title" translatable="yes">Scales</property>
     <signal name="delete-event" handler="onDeleteWindow" swapped="no"/>
+    <signal name="key-press-event" handler="key_pressed" swapped="no"/>
     <child>
       <object class="GtkGrid" id="grid1">
         <property name="can_focus">False</property>
@@ -39,7 +40,6 @@
             <property name="show_fill_level">True</property>
             <property name="digits">0</property>
             <signal name="change-value" handler="change_value" object="adjustment1" swapped="no"/>
-            <signal name="value-changed" handler="value_change" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">1</property>

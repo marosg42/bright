@@ -15,8 +15,8 @@ class Handler:
         subprocess.call("xrandr --output DP1 --brightness {}".
                         format(self.value/100), shell=True)
 
-    def value_change(self, *args):
-        pass
+    def key_pressed(self, *args):
+        Gtk.main_quit(*args)
 
 
 builder = Gtk.Builder()
